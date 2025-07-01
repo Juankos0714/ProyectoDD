@@ -1,10 +1,11 @@
 package InterfacesGraficas.src.fabrica;
 
+import InterfacesGraficas.src.fabricas.interfaces.Interfaz;
 
 public abstract class FabricaDeInterfaces {
-    public void renderizarInterfaz () {
-//        Juguete juguete = crearJuguete();
-//        juguete.jugar();
-//    }
-//    public abstract Juguete crearJuguete();
-}}
+    public void renderizarInterfaz() {
+        Interfaz interfaz = crearInterfaz();
+        interfaz.usar();
+    }
+    public abstract Interfaz crearInterfaz();
+}
