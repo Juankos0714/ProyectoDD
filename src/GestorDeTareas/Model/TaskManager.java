@@ -34,6 +34,15 @@ public class TaskManager {
         return false;
     }
 
+    public boolean removeTask(int id) {
+        Task task = getTaskById(id);
+        if (task != null) {
+            tasks.remove(task);
+            return true;
+        }
+        return false;
+    }
+
     public int getTaskCount() {
         return tasks.size();
     }
